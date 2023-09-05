@@ -1,0 +1,68 @@
+/* CSS for create_product.blade.php */
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(180deg, #f8f9fa 50%, #87aacebf 50%);
+}
+
+.container {
+    text-align: center;
+}
+
+.form-container {
+    width: 95%;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+button {
+    display: block;
+    width: fit-content;
+    margin: 0 auto; 
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; 
+}
+
+.index-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.btn-index {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #002751; 
+}
+
+.btn-index:hover {
+    background-color: #002751; 
+}
+
