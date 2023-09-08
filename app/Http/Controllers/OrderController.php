@@ -92,4 +92,30 @@ class OrderController extends Controller
 
         return Redirect::back();
     }
+
+    public function index()
+    {
+        $orders = Order::all();
+
+        return view('index', compact('orders'));
+    }
+
+    public function filter(Request $request)
+    {
+        $start_date = $request->start_date;
+        $end_date = $request->end_date;
+
+        $orders = Order::whereDate('created_at', '>=', $start_date)
+                     ->whereDate('created_at', '<=', $end_date)
+                     ->get();
+
+        return view('index', compact('orders'));
+    }
+
+    public function delete_order(Order $order)
+    {
+        $order->delete();
+
+        return Redirect::route('list-order');
+    }
 }

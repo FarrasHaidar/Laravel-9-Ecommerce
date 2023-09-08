@@ -21,7 +21,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('index_product') }}">
-                    E-Commerce
+                    Orino Pet Shop
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
@@ -59,7 +59,8 @@
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     @if(Auth::user()->is_admin)
                                         <a href="{{route('create_product')}}" class="dropdown-item">Create Product</a>
-                                    @else
+                                        <a href="{{route('list-order')}}" class="dropdown-item">List Order</a>
+                                    @else    
                                         <a href="{{route('show_cart')}}" class="dropdown-item">Cart</a>
                                     @endif
                               

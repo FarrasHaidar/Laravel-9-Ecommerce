@@ -40,6 +40,12 @@ Route::middleware(['admin'])->group(function () {
     Route::delete('/product/{product}', [ProductController::class, 'delete_product'])->name('delete_product');
 
     Route::post('/order/{order}/confirm', [OrderController::class, 'confirm_payment'])->name('confirm_payment');
+
+    Route::get('/list-order', [OrderController::class, 'index'])->name('list-order');
+
+    Route::get('/filter', [OrderController::class, 'filter'])->name('filter');
+
+    Route::delete('/list-order/{order}', [OrderController::class, 'delete_order'])->name('delete_order');
 });
 
 Route::middleware(['auth'])->group(function () {
